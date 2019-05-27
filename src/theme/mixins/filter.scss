@@ -1,0 +1,21 @@
+@mixin bg-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+  
+@mixin f-filter {
+  width: 90%;
+  height: 90%;
+  top: 18%;
+  left: 5%;
+  /* 高斯模糊 */
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  filter: blur(8px);
+  opacity: 0.8;
+  position: absolute;
+  object-fit: cover;
+}
+  

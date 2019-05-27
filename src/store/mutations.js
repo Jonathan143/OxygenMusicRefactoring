@@ -1,4 +1,4 @@
-import {shuffle} from '@/untils/methods.js'
+import {shuffle} from '@/utils/methods.js'
 
 let CLEAR_PLAY_LIST = state => {
   state.playList = []
@@ -42,11 +42,6 @@ let shuffleModel = state => {
   state.playList = shuffleList
 }
 
-// 心动模式
-let HeartbeatModel = state => {
-
-}
-
 let DEL_MUSIC = (state, id) => {
   let items = state.playList
   for (let i = 0; i < items.length; i++) {
@@ -87,6 +82,5 @@ export default {
   OPEN_LOADING,
   changeUserStatus,
   ADD_Next_MUSIC,
-  shuffleModel,
-  HeartbeatModel
+  shuffleModel
 }

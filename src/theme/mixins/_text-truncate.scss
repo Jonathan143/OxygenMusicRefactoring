@@ -1,0 +1,14 @@
+/*
+  文本截取显示
+  line-num: 显示文本的行数 默认一行
+*/
+@mixin text-truncate($line-num: 1) {
+  word-break: break-all;
+  display: -webkit-box;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /*! autoprefixer: on */
+  -webkit-line-clamp: $line-num;
+  overflow: hidden;
+  cursor: pointer;
+}

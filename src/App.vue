@@ -11,5 +11,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './theme/index.scss';
+
+#app {
+  font-size: 12px;
+  color: $--color-text-regular;
+}
 </style>

@@ -3,7 +3,6 @@
  * 请求拦截、响应拦截、错误统一处理
  */
 import axios from 'axios'
-import { Toast } from 'vant'
 import store from '../store/index'
 // import qs from 'qs' // 根据需求导入qs模块
 
@@ -12,7 +11,7 @@ import store from '../store/index'
  * 禁止点击蒙层、显示一秒后关闭
  */
 const tip = msg => {
-  Toast({
+  this.$toast({
     type: 'fail',
     content: msg,
     duration: 1000,
@@ -58,7 +57,7 @@ const errorHandle = (status, other) => {
  */
 let baseURL = ''
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://localhost:3000'
+  baseURL = 'http://10.10.10.97:3000'
 } else if (process.env.NODE_ENV === 'production') {
   baseURL = 'https://api.yang143.cn/'
 }

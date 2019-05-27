@@ -16,7 +16,8 @@ const tip = msg => {
     type: 'fail',
     content: msg,
     duration: 1000,
-    mask: true
+    mask: true,
+    forbidClick: true
   })
 }
 

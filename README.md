@@ -1,4 +1,4 @@
-# oxygenmusic
+# oxygenMusic
 
 ## Project setup
 ```

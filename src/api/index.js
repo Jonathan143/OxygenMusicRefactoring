@@ -4,6 +4,7 @@
  */
 import axios from 'axios'
 import store from '../store/index'
+import { Toast } from 'vant'
 // import qs from 'qs' // 根据需求导入qs模块
 
 /**
@@ -11,11 +12,10 @@ import store from '../store/index'
  * 禁止点击蒙层、显示一秒后关闭
  */
 const tip = msg => {
-  this.$toast({
+  Toast({
     type: 'fail',
-    content: msg,
+    message: msg,
     duration: 1000,
-    mask: true,
     forbidClick: true
   })
 }
@@ -57,7 +57,7 @@ const errorHandle = (status, other) => {
  */
 let baseURL = ''
 if (process.env.NODE_ENV === 'development') {
-  baseURL = 'http://10.10.10.97:3000'
+  baseURL = 'http://localhost:3000'
 } else if (process.env.NODE_ENV === 'production') {
   baseURL = 'https://api.yang143.cn/'
 }

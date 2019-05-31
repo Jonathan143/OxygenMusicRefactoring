@@ -8,10 +8,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: () => import(`./views/home`),
-      meta: {
-        keepAlive: true
-      }
+      component: () => import(`./views/home`)
     }
   ]
 })

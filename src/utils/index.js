@@ -1,5 +1,5 @@
 function setPicUrl(params) {
-  if (params) return `${params.slice(5)}?param=180y180`
+  if (params) return `${params.replace('http:', '')}?param=180y180`
 }
 //首页新歌速递
 let getSongs = data => {

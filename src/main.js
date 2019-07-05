@@ -5,9 +5,9 @@ import store from '@/store'
 import api from '@/api'
 import 'amfe-flexible'
 import VueLazyload from 'vue-lazyload'
-import { Toast, Icon, Dialog } from 'vant'
+import { Toast, Icon, Dialog, Button } from 'vant'
 
-Vue.use(Toast).use(Icon).use(Dialog)
+Vue.use(Toast).use(Icon).use(Dialog).use(Button)
 
 Vue.prototype.axios = api
 Vue.use(VueLazyload, {

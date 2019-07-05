@@ -12,10 +12,19 @@ export default {
 </script>
 
 <style lang="scss">
-@import './theme/index.scss';
+@import '~@/theme/reset.scss';
+@import '~@/theme/index.scss';
 
 #app {
   font-size: 12px;
-  color: $--color-text-regular;
+  color: #606266;
+
+  .van-button--primary {
+    border-color: $--color-primary;
+    background-color: $--color-primary;
+  }
+  .van-button--disabled {
+    opacity: 0.7;
+  }
 }
 </style>

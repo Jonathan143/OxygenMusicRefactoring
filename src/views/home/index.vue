@@ -14,9 +14,10 @@
           <i class="iconfont"
             :class="tab.icon"></i>
         </div>
-        <component :is="tab.name"></component>
+        <!-- <component :is="tab.name"></component> -->
       </van-tab>
     </van-tabs>
+    <component :is="componentList[active]"></component>
   </div>
 </template>
 
@@ -24,12 +25,14 @@
 import { Tab, Tabs } from 'vant'
 import Home from './components/home'
 import Find from './components/find'
+import Personal from './components/personal'
 export default {
   components: {
     [Tab.name]: Tab,
     [Tabs.name]: Tabs,
     Home,
-    Find
+    Find,
+    Personal
   },
   data() {
     return {
@@ -38,8 +41,18 @@ export default {
         { name: 'personal', icon: 'icon-wo1' },
         { name: 'home', icon: 'icon-yinle' },
         { name: 'find', icon: 'icon-faxian' }
-      ]
+      ],
+
+      componentList: ['personal', 'home', 'find']
     }
+  },
+  watch: {
+    active(value) {
+      sessionStorage.homeActiveTab = value
+    }
+  },
+  created() {
+    this.active = sessionStorage.homeActiveTab || 1
   }
 }
 </script>

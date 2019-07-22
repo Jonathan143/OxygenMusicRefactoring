@@ -14,10 +14,9 @@
           <i class="iconfont"
             :class="tab.icon"></i>
         </div>
-        <!-- <component :is="tab.name"></component> -->
+        <component :is="tab.name"></component>
       </van-tab>
     </van-tabs>
-    <component :is="componentList[active]"></component>
   </div>
 </template>
 
@@ -41,9 +40,7 @@ export default {
         { name: 'personal', icon: 'icon-wo1' },
         { name: 'home', icon: 'icon-yinle' },
         { name: 'find', icon: 'icon-faxian' }
-      ],
-
-      componentList: ['personal', 'home', 'find']
+      ]
     }
   },
   watch: {

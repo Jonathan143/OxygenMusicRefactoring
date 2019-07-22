@@ -60,11 +60,6 @@
         </div>
       </div>
     </div>
-    <!-- <md-image-viewer v-model="isViewerShow"
-      :list="imgViewList"
-      :has-dots="true"
-      :initial-index="viewerIndex">
-    </md-image-viewer> -->
   </div>
 </template>
 
@@ -89,7 +84,10 @@ export default {
     showViewer(index, pics) {
       this.isViewerShow = true
       this.viewerIndex = index
-      ImagePreview(pics)
+      ImagePreview({
+        images: pics,
+        startPosition: index
+      })
     },
 
     onSongClick(source) {
